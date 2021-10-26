@@ -24,3 +24,60 @@ body{
     font-size: 25px;
     z-index:6;
 }
+#MenuButton {
+    cursor: pointer;
+    transition: .25s;
+    height: 35px;
+    width: 35px;
+    position: Absolute;
+
+    z-index: 5;
+    /* filter: invert(1); */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  #MenuButton:hover {
+    filter: invert(1);
+  }
+  #Menu{
+    transition: 1s;
+    padding:0;
+    top:0%;
+    height:100%;
+    width:0px;
+    float:left;
+    background-color: rgb(0,0,0,50%);
+    z-index:5;
+    position:absolute;
+  }
+  .closebtn{
+    transition: 0.5s;
+    text-decoration: none;
+    color:white; 
+    font-size: 45px; 
+        position: absolute;
+            top: 0;
+    right: 25px;
+        font-size: 36px;
+            margin-left: 50px;
+
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .closebtn:hover{
+    filter: invert(1);
+  }
