@@ -1,3 +1,7 @@
-#style{
-    
+.Header{
+    width:100%; 
+    background-color: aqua;
+}
+#title{
+    font-size: 25px;
 }
