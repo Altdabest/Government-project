@@ -1,13 +1,13 @@
 var c = 1;
 function openNav() {
-    document.getElementById("Menu").style.width = "25%";
+  document.querySelector(".Menu").style.width = "25%";
 
-    document.getElementById("Menu").style.left = "-10px";
+    document.querySelector(".Menu").style.left = "0px";
   }
   function closeNav() {
-    document.getElementById("Menu").style.width = "0%";
+    document.querySelector(".Menu").style.width = "0%";
         // document.getElementById("Menu").style.marginRight= "0%";
-          document.getElementById("Menu").style.left = "-10px";
+        document.querySelector(".Menu").style.left = "0px";
         // document.getElementById("Menu").style.display = "block";
   }
   function Nav(){
@@ -16,4 +16,18 @@ function openNav() {
   }
   function setC(c){
     this.c = c;
+  }
+
+  function show(){
+    document.querySelector("#Issues1").style.display = "block";
+    document.querySelector("#Issues2").style.display = "block";
+    document.querySelector("#Issues3").style.display = "block";
+    document.querySelector("#Issues4").style.display = "block";
+    // document.querySelector(".IssuesPage").style.display = "block";
+  }
+  function hide(){
+    document.querySelector("#Issues1").style.display = "none";
+    document.querySelector("#Issues2").style.display = "none";
+    document.querySelector("#Issues3").style.display = "none";
+    document.querySelector("#Issues4").style.display = "none";
   }
