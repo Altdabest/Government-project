@@ -1,23 +1,158 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-<!--     <link rel="stylesheet" href="style.css"> -->
+<html lang="en">
+<head>
+    <link rel="icon"  href=""/>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <title>Home</title>
     <link rel ="stylesheet" href="https://query.data.world/s/vq4yu5tklvfjeukumsz4hgisd6yjf5">
 </head>
-<body>
-    <div class= "Header">
-        <h1 id="title">Canadacy</h1>
+
+<body onload="start()">
+    <header>
+        <h1 id="title">Home</h1>
+    </header>
+    <img class="MenuButton" title="Menu" src="./Assets/Menu.png" onclick="Nav();">
+    <p class="Menu">
+        <span href="#" id="closebtn" onclick="Nav();">×</span>
+        <a class="active" href="#Home" id="Home">Homepage</a>
+        <a href="#About" id="About">About</a>
+        <a href="#Issue" id="Issue" onmouseover="show();" onmouseleave="hide();">Issues</a>
+                <a href="#Issue1" id="Issues1" onmouseover="show();" onmouseleave="hide();">Cut Down Required Schooling</a>
+                <a href="#Issue2" id="Issues2" onmouseover="show();" onmouseleave="hide();">Strong Pro-military and Gun Rights</a>
+                <a href="#Issue3" id="Issues3" onmouseover="show();" onmouseleave="hide();">Adding Unemployment Benefit Restrictions</a>
+                <a href="#Issue4" id="Issues4" onmouseover="show();" onmouseleave="hide();">Stopping Illegal Immigration</a>
+
+        <a href="#Dates" id="Dates">Dates</a>  
+        <a href="#Contact" id="Contact">Contact</a>  
+    </p> 
+
+
+    <div id="HomePage">
+        <img title="Canadiate" id="Canadiate" src="./Assets/Cheems.png">
+
+        <div id="LeftSideHome">
+            <span>Cheems was born on April 20th, 2011, in Big Horn, Wyoming. In his childhood, growing up in the little town was a joy for Cheems. He always loved helping others and always put the people’s needs before anything else. In school, Cheems was very bright, always got A’s and surpassed the teacher’s expectations. Everyone knew him for his good deeds and always saw him as a good leader. No matter what he wanted to do, everyone supported him. In his later years after high school, he had gone to a 4-year university to pursue his dreams of being a NASA employee. He was top of his class every year and always got the best grades and awards. Unfortunately, when it came time to apply to NASA, they rejected him because the employees were allergic to dogs. </span>
+        </div>
+        <div id="RightSideHome">
+            <span>Cheems was in so much despair that he had no idea what to do with himself. One day he got a call from his younger brother Cheebs and reminded Cheems how good of a leader he is. With that inspiration, Cheems thought to run for president, the best job for his personality.  Cheems heard the people’s cries and replied with his good heart and helped as many as he could. He kept this up until the day of election where he versed Joe Biden and Donald Trump. While Cheems may be a dog, he was still the kindest and most hard working individual candidate. Everyone agreed with his morals and what he supported. Cheems is now the president of the United States and plans on winning the next election, so don’t vote otherwise.</span>
+        </div>
+
     </div>
-    <div id="Background" onclick="setC(1); closeNav();"></div>
+    <div id="AboutPage">
+        <p> This is the content in the p2 div</p>
+    </div>
+    <div id="IssuePage">
+        <div id="IssuesBox">
+            <a id="Issue1" onclick="issues(0);">Cut Down Required Schooling</a>
+            <a id="Issue2" onclick="issues(1);">Strong Pro-military and Gun Rights</a>
+            <a id="Issue3" onclick="issues(2);">Adding Unemployment Benefit Restrictions</a>
+            <a id="Issue4" onclick="issues(3);">Stopping Illegal Immigration</a>
+        </div>
+    </div>
 
+    <div id="DatesPage">
+        <p> This is the content in the p4 div</p>
+    </div>
+    
+    <div id="Issues1Page">
+        <p>	The United States youth is the future of this country.</p>
+        <p>When the standardized school system was first introduced it taught youth how to be an officer worker in the 80’s.</p>
+        <p>In today's day and age there are very few 9-5 jobs compared to previous times.</p>
+        <p>This means youth are learning how to live in a time that has already passed.</p>
+        <p>I believe that students should be allowed to learn many different skills and not just the standard 4 that are required in today's age.</p>
+        <p>I as a candidate want to give students the opportunity to explore realistic world jobs and careers and I promise to open up the school requirements to allow creativity and advancement in our youth.</p>
+    </div>
+    <div id="Issues2Page">
+        <p>From The Revolution to World War 2 to Afghanistan the world has proven that peace was never an option.</p>
+        <p>This was what the great Goose taught us.</p>
+        <p>Thus the United States must maintain a strong military and allow for the citizens to overtake an oppressive and freedom lacking government.</p>
+    </div>
+    <div id="Issues3Page">
+        <p>The people of the United States are lazy. It's as simple as it comes.</p>
+        <p>As president my committee promises to improve the Unemployment system and make sure that</p>
+        <p>we as a nation are rewarding people for hard work and not for being a non contributing member to society.</p>
+    </div>
+    <div id="Issues4Page">
+        <p>This expands to the immigration policy as well. </p>
+        <p>If a person of any status wishes to reap the large benefits of our great nation then they must work for it. </p>
+        <p>This means that they must go through the legal process of immagration and pay their dues to the nation.</p>
+    </div>
+    <div id="ContactPage">
+        <p> This is the content in the issues4 div</p>
+    </div>
+
+<footer>
+    <p>Author: Andrew Trainor</p>
+    <p><a href="mailto:Andrewltrainor@gmail.com">Andrewltrainor@gmail.com</a></p>
+    </footer>
 </body>
-<img id="MenuButton" title="Menu" src="./Assets/Menu.png" onclick="Nav();">
 
-<div id="Menu">
-    <a href="javascript:void(0)" class="closebtn" onclick="Nav()">×</a>
-</div>
 <script src="https://query.data.world/s/5u4zjfahs3hzwpebdg2ht5nl5qzpcc"></script>
+    
+<script>
+    function issues(i){
+        $(".active").toggleClass("active");
+        var arr = ["Issues1","Issues2","Issues3","Issues4"];
 
-<!-- <script src="functions.js"></script> -->
+        $("#"+arr[i]).toggleClass("active");
+        
+        var title = document.querySelector("#title");
+        title.innerText = document.querySelector("#"+arr[i]).innerText;
 
+        $(".pactive").fadeOut(200).promise().done(function(){
+            $(".pactive").toggleClass("pactive");
+            $("#"+arr[i]+ "Page").toggleClass("pactive");
+            $(".pactive").fadeIn(200);
+        });
+    }
+    $(".Menu a").click(function(){
+        Nav();
+        $(".active").toggleClass("active");
+        $(this).toggleClass("active");
+        var id = this.id;
+        var title = document.querySelector("#title");
+        title.innerText = document.querySelector("#"+id).innerText;
+
+        $(".pactive").fadeOut(200).promise().done(function(){
+            $(".pactive").toggleClass("pactive");
+            $("#"+id+ "Page").toggleClass("pactive");
+            $(".pactive").fadeIn(200);
+        });
+    });
+
+</script>
+<script>
+       function start(){
+        $(".active").toggleClass("active");
+        $("#Home").toggleClass("active");
+        $(".pactive").fadeOut(200).promise().done(function(){
+            $(".pactive").toggleClass("pactive");
+            $("#"+"Home"+ "Page").toggleClass("pactive");
+            $(".pactive").fadeIn(200);
+        });
+    }
+ 
+</script>
+<style>
+#Issues1, 
+#Issues2,
+#Issues3,
+#Issues4{
+    transform: 1s;
+    font-size: 25px;
+    padding: 30px;
+    display: none;
+}
+#HomePage,
+#AboutPage,
+#IssuePage,
+#Issues1Page,
+#Issues2Page,
+#Issues3Page,
+#Issues4Page,
+#ContactPage,
+#DatesPage{
+    display : none;
+}
+</style>
 </html>
