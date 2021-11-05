@@ -30,4 +30,21 @@ function openNav() {
     document.querySelector("#Issues2").style.display = "none";
     document.querySelector("#Issues3").style.display = "none";
     document.querySelector("#Issues4").style.display = "none";
+    // document.querySelector(".Issues").style.display = "none";
+    
+    // document.querySelector(".IssuesPage").style.display = "block";
+
   }
+
+  function submit(){
+    document.querySelector("#Message").value="";
+    alert("Message Sent");
+  }
+  // $.mobile.changePage(pages.issue1);
+  // var currentView = new HomeView();
+  
+//   var b = 1;
+//   function openButtonDiv(){
+//     (b==1)?document.querySelector(".Buttons").style.width = "400px":document.querySelector(".Buttons").style.width = "0px";
+//     (b==1)?b=0:b=1;
+//   }
